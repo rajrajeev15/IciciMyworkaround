@@ -1,0 +1,6 @@
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\bin\Debug\OOPS_LinQ.exe.config
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\bin\Debug\OOPS_LinQ.exe
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\bin\Debug\OOPS_LinQ.pdb
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\obj\Debug\OOPS_LinQ.exe
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\obj\Debug\OOPS_LinQ.pdb
+D:\MVC_Projects\OOPS_LinQ\OOPS_LinQ\obj\Debug\OOPS_LinQ.csprojResolveAssemblyReference.cache

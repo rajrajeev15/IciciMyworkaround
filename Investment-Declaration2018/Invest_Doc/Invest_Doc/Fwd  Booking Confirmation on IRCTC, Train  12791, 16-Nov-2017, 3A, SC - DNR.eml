@@ -1,0 +1,451 @@
+X-Account-Key: account1
+X-UIDL: 27742
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Received: from HYDEXCH10.icicibankltd.com (10.50.90.37) by
+ HYDEXCH12.icicibankltd.com (10.50.90.39) with Microsoft SMTP Server (TLS) id
+ 15.0.1320.4 via Mailbox Transport; Thu, 14 Dec 2017 10:58:04 +0530
+Received: from HYDEXCH08.icicibankltd.com (10.50.90.35) by
+ HYDEXCH10.icicibankltd.com (10.50.90.37) with Microsoft SMTP Server (TLS) id
+ 15.0.1320.4; Thu, 14 Dec 2017 10:58:03 +0530
+Received: from HYDEXEDG01.icicibankltd.com (192.168.119.241) by
+ HYDEXCH08.icicibankltd.com (10.50.90.35) with Microsoft SMTP Server (TLS) id
+ 15.0.1320.4 via Frontend Transport; Thu, 14 Dec 2017 10:58:03 +0530
+X-CrossPremisesHeadersFilteredBySendConnector: HYDEXEDG01.icicibankltd.com
+Received: from HYDMAILMPSEX2.localdomain (192.168.119.226) by
+ HYDEXEDG01.icicibankltd.com (192.168.119.241) with Microsoft SMTP Server id
+ 15.0.1320.4; Thu, 14 Dec 2017 10:57:25 +0530
+Received: by HYDMAILMPSEX2.localdomain (Postfix, from userid 600)
+	id 3yy2C53bgnzGH8H; Thu, 14 Dec 2017 10:57:06 +0530 (IST)
+Received: from jprmail7.icicibank.com (unknown [192.168.115.197])
+	by HYDMAILMPSEX2.localdomain (Postfix) with ESMTP id 3yy29x3tTKz1tnsy
+	for <rajeev.k@ext.icicibank.com>; Thu, 14 Dec 2017 10:57:01 +0530 (IST)
+X-AuditID: c0a872c5-1c7ff70000007223-38-5a320b9dbca9
+Received: from mail-wm0-f45.google.com (mail-wm0-f45.google.com [74.125.82.45])
+	(using TLS with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client did not present a certificate)
+	by jprmail7.icicibank.com (Mail Server Ready ...) with SMTP id 6B.13.29219.F9B023A5; Thu, 14 Dec 2017 10:56:56 +0530 (IST)
+Received: by mail-wm0-f45.google.com with SMTP id i11so8994608wmf.4
+        for <rajeev.k@ext.icicibank.com>; Wed, 13 Dec 2017 21:26:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=DcUstqLtRrAVRFZb3DLa+OZqpZD2xK0Pl8aBS++I/DM=;
+        b=kvsNlXuva8+HlU48xH+Y3QQDR4z6AxrXDKcFDfvjQ4ZCXH9fSXcaoUwMKiR5DCVX6y
+         wXnmeKAe5Oa78IwE7O+Dbd4V2lSDQZC1p7FcKsKe25P8+my5R13WP9demBZR2vhdIQbA
+         Vt9EIQuWmG8V7tY+8kocRp0suAFTboqNaxDtTODto2GO933WW8X3nz8bxw/+hoM+4qZr
+         jQ6UDJXBxFHvGFWHzcskS194WT2T5PnLx2W3GQoPhRQequW3i4AjxKMm0YpTw5hsyiJN
+         OM03UCk8+arI/7QDcMi+whWP/Pm6Ai9oiHX3wreCY43BqYQTmBSZKwwIxmw/UWWjR3eH
+         NvxQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=DcUstqLtRrAVRFZb3DLa+OZqpZD2xK0Pl8aBS++I/DM=;
+        b=QSWU66fRMNI1f8jlUEi2SmBX/FQ+9Qai5W6NCzDoly69x6XSBZQMhMZdvVZqThPP92
+         AHmcqOITneYJYMj/+3kVEyZxfiCBs1bB4D8pnxnN3UaG2OyWK42hHuMXHF7/GksBvrIs
+         PuKvvvOTbgdIH2L/Wy1ArvHE9OIgNEhHz5hQrq0wUN25BXJlUSSdId4OEAJ6MvuO4y+c
+         swoGYTOGI5NQF0KZvXasi2RcO3x10ONp00T6b2nrDFgrNaZAC+oRy5StXtBqI927Xtbn
+         fJfd5KjcMggfez4w6M+9EYtjFP9694nJ3k0y+Zw8fsJNcXdbtF+zH2+5D/mxIlguT3nH
+         sDCg==
+X-Gm-Message-State: AKGB3mL8Xgx+axtz0sXRINIuKYnAtv37C8unsU6SI7ALhIwCvwhJbTkk
+	ZwWgjXAA5VaKj6RRb7v+gZxzRf3c/ydD0fhTZtg=
+X-Google-Smtp-Source: ACJfBovc786sR54qyjCj6UCCfqdBIg/tBWQYE0vdRDUQSzWYlZh8fzLd8zHh+AUVV7xqV+7MBRxn2pi1pWHL7VjwiMs=
+X-Received: by 10.28.52.207 with SMTP id b198mr1099386wma.154.1513229211987;
+ Wed, 13 Dec 2017 21:26:51 -0800 (PST)
+Received: by 10.28.231.14 with HTTP; Wed, 13 Dec 2017 21:26:51 -0800 (PST)
+Received: by 10.28.231.14 with HTTP; Wed, 13 Dec 2017 21:26:51 -0800 (PST)
+In-Reply-To: <585203350.3227855.1503214260212.JavaMail.wluser@ngetrsml02.cris.org.in>
+References: <585203350.3227855.1503214260212.JavaMail.wluser@ngetrsml02.cris.org.in>
+From: Rajeev Raj <raj.rajeev15@gmail.com>
+Date: Thu, 14 Dec 2017 10:56:51 +0530
+Message-ID: <CAEeg8dVhXGh80e3GXcyZJqurPyhjLw19zToO7EEiA=02xH5CrA@mail.gmail.com>
+Subject: Fwd: Booking Confirmation on IRCTC, Train: 12791, 16-Nov-2017, 3A, SC
+ - DNR
+To: rajeev.k@ext.icicibank.com
+Content-Type: multipart/alternative; boundary="001a11435b4ca4f48b056046210d"
+Authentication-Results: symauth.service.identifier; spf=pass; senderid=pass
+X-Brightmail-Tracker: H4sIAAAAAAAAA3VUDUxTVxjltq/ta+mF5+PHj07QNZlRN/nLZmRhZBvZVNwmwc0sZIsr8KAN
+	pcW+FtHMjfE/5lA3p8OfBmUoEBYJxgwcEgUWwAkDFxngnOiQCczhRAU3NLuvr4UHydLk5nvn
+	3O/ec753Xmk526HV0Vy2nbNZDGa9UkPF7UpYvbrcOzIxfHdJ9NpTY4Wql9H67pE+ZTxK1ESn
+	cGZTFmcLi/lAY7zcU6TMnDqBsr+sHUA5qHEvKkFqGpjn4UJXuawEaWiWOSuD43VtCvFhP4Li
+	oUG58EAxMxS0/u6UiS0VCqgYihbr7TB6YkIu1jb4tv6YSqztcONkg0KoMbMIOsuGqRJEk1Pj
+	4PqPW+aValrNvAONt8YooWaZt6Gzu8x1k5JZCf2Fea5TKOYZuNW3H4knxsOhk3dduB+zBZ7U
+	3XHh/kwI5H865eqVM29AX/sB1x7EbIQ/r7Sr9iL/QxJBhyTbxHolFHz3r0qsV0D5r81IrJ+F
+	E8fG5eVIUYOCNmx+c11cfMLm2PCIUFMy+SUZLOmhydaMekTex/kq2w8N6J8zr7UghkZ6Ld6n
+	iExkFYYsfkdGCypCtEwfgIdogvkkWVN2GA28cavNYeZ4vT9mNATGs3CSw5yu1+EENUH9ZlEL
+	t503c3aSAH0IHs0PS2QXz3K8g88kgqwOfqvDZia9f4+HS3t5R1KGiedNVksLAlpOrly+L4Jc
+	mWLYsZOzWUUhLegpmtIvxn1ROJFl0gx2Lp3jMjmbhz1A3p0ecIIgdpGNS+OyU01mu4cnjY8Q
+	YRgp43ISjD8sIGoDpYTEzNOYDQ1NZHVSeoGfYIy8vLzmnyC1JKPVwqJpQbmI1hJ3Id7CQPlM
+	QwZvSnPr88OxE8Sz1oO6tAVhX2HKrAeU6ArGGpdsD7VAU5CoiZ2jPXouoi5ENzcNzsjom/3X
+	yFo3IKzNrrVuaoisI2XjOXLa2f4wV07XVD/Jk7OUxWrhdIvxsJAQRjjU6LDMDlcXiKk1ZEi+
+	EkLQr1uCH79A8AAJPmdBtwzf+IXkIEjCzndB+nsFkwHzdniMeP5mLqNgnZ9oV0vykGGyu0fq
+	5sdQpYxE3g9vEqKhNVnsc1NncbAwYG836Bo64AalkCE3Jpn5EgwuOW5mwchBjPWiWdYjNLIS
+	kU/9i6Xw5KcqBI8O30TgnB5BcHpsEkHT8IwMOpylcijI65BDj/MoBfXXL1Dw22QPBaXFxQpo
+	y72qhOKmAhVUHGlSQcnkgAoaDhapYXqkUg3f99eqoe3nexoomDrsDU5nhRa+OrcHw2THJQw9
+	3zzE0F/T7gNtLVd94P7nd31gsDnXFyb/GvSF6eoqBi4dbWeg+3QXMybkU0by+Yfw+WLebrBL
+	87lW8K71oO58rhFA1gPOy2eUmE839X/5nKU909LloJhT6tc7A+8kTN7u2ViT0Dt6JSp1uHXZ
+	i76914KmXmnNKl2luB62Pv3I/TKv3Y8b39o0cT5s7cXjvnHPfZ1/u1l9z6h8d+exXduyS40v
+	dW8fP3owJvq9mQnr/qgHD2L7knM/+zivKkIWqTzXu+ds6rozn6xo+qh+zYbw9yuW7+ysrd5m
+	erWLKdRTvNEQsUpu4w3/ATI6zNfbBgAA
+Return-Path: raj.rajeev15@gmail.com
+X-MS-Exchange-Organization-PRD: gmail.com
+X-MS-Exchange-Organization-SenderIdResult: TempError
+Received-SPF: TempError (HYDEXEDG01.icicibankltd.com: error in processing
+ during lookup of raj.rajeev15@gmail.com: DNS timeout)
+X-MS-Exchange-Organization-Network-Message-Id: e8dbedef-b67e-4e6d-da0d-08d542b35c36
+X-OrganizationHeadersPreserved: HYDEXEDG01.icicibankltd.com
+X-MS-Exchange-Organization-AVStamp-Mailbox: SYMANTEC;1;0;info
+X-MS-Exchange-Organization-AuthSource: HYDEXEDG01.icicibankltd.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+MIME-Version: 1.0
+
+--001a11435b4ca4f48b056046210d
+Content-Type: text/plain; charset="UTF-8"
+
+---------- Forwarded message ----------
+From: <ticketadmin@irctc.co.in>
+Date: 20-Aug-2017 1:01 PM
+Subject: Booking Confirmation on IRCTC, Train: 12791, 16-Nov-2017, 3A, SC -
+DNR
+To: <raj.rajeev15@gmail.com>
+Cc:
+
+------------------------------
+
+
+
+*This is a system generated mail. Please do not reply to this email ID. If
+you have a query or need any clarification you may: (1) Call our 24-hour
+Customer Care or(2) Email Us care@irctc.co.in <care@irctc.co.in> *
+------------------------------
+
+Ticket Confirmation
+[image: IRCTC]
+
+*Dear Customer,*
+
+Congratulations! Thank you for using IRCTC's online rail reservation
+facility. Your e-ticket has been booked and the details are indicated below.
+
+Please take a screenshot of ERS i.e. Virtual Reservation Message(VRM) OF
+YOUR TICKET FROM YOUR Booked Tickets History page .You have to carry this
+VRM or SMS send to you along with any one from the listed identity cards
+(Voter Identity Card / Passport / PAN Card / Driving License / Photo ID
+card issued by Central / State Govt / Student Identity Card with photograph
+issued by recognized School or College for their students / Nationalised
+Bank Passbook with photograph / Credit Cards issued by Banks with laminated
+photograph) during train journey in original. Both these i.e SMS or VRM &
+original ID will be examined by ticket checking staff on stations/trains
+for verification purpose.
+
+Ticket Details
+------------------------------
+*Transaction ID : * 100000949758067 *PNR No. :* 4135269875 *Train No. &
+Name : * 12791 / SC DNR EXPRESS
+*Date of Booking : * 20-Aug-2017 *Class : * THIRD AC *Quota : * GENERAL
+*Date of Journey : * 16-Nov-2017 *From : * SC *To : * DNR
+*Boarding At : * SC *Date Of Boarding : * 16-Nov-2017 *Reservation Upto :*
+DNR
+*Scheduled Departure : * N.A. *Insurance (No. of Psng) : * 3
+
+Passenger Details
+------------------------------
+*Sl. No.* *Name* *Age* *Gender* *Status* *Coach* *Seat / Berth / WL No*
+1 MANISH SHARMA 31 Male CNF B4  33
+2 RITUL RANJAN 28 Female CNF B4  36
+3 RAJEEV KUMAR 31 Male CNF B4  35
+Fare Details
+------------------------------
+*Distance :* 1830 KM
+*Ticket Fare :* Rs. 5610.00
+*Service Charge :* Rs. 0.00
+*Travel Insurance Premium (Inclusive of Service Tax) :* Rs. 0.00
+*Total Fare :* Rs. 5610.00 *
+** Payment Gateway charges as applicable.*
+
+For cancellation of your ticket, please log in to your account, select the
+PNR you wish to cancel and cancel your ticket online. Cancellation of your
+e-Ticket is possible only on the website www.irctc.co.in, and is NOT
+possible on PRS Counters.
+
+You can cancel any of the passenger names from the list of passengers on
+this ticket without affecting the ticket as a whole.
+
+This ticket is booked on a personal user ID and can not be sold by an
+agent. If bought from an agent by any individual, it is at his/her own risk
+
+CANCELLATION OF E-TICKETS
+
+(1) E-Ticket can be cancelled online till preparation of charts (which is
+normally 4 to 6 hours before the scheduled departure of the train from the
+originating stations. (For trains starting up to 12 noon the chart
+preparation is usually done on the previous night)) OR 4 hours before the
+scheduled departure of boarding the train in case of confirmed ticket OR 30
+minutes before the scheduled departure of boarding the train in case of
+RAC/WL whichever is earlier. If by any reason you are unable to cancel your
+ticket on the website till the time of charting please mail to
+etickets@irctc.co.in. User can check their refund status online by clicking
+"Refund Status" link after logging in. All refund will be processed as per
+extent Railway Refund Rules. Please refer refund rules here
+<https://www.irctc.co.in/eticketing/staticPage/IRRules.html>.
+
+(2) After preparation of charts, the user shall have to file online TDR for
+claiming refund. IRCTC forward the case to concerned Zonal Railway on the
+basis of Customer request through EDR and Enhance coaching refund system.
+The refund case will be decided by Railways. The TDR can be filed by the
+same user who books the ticket. After receipt of the refund amount from
+Railway, it shall be credited only in the same account through which
+booking was made through opted payment gateway. If by any reason you are
+unable to file TDR through website please mail to etickets@irctc.co.in.
+User can check TDR/Refund status through TDR History. All refund will be
+process as per extent Railway Refund Rules. Please refer refund rules here
+<https://www.irctc.co.in/eticketing/staticPage/IRRules.html>.
+
+(3) Any refund amount will be credited only in the same account through
+booking was made by user. Customer is advised not to close that account so
+that refund amount will be credited back.
+
+For CHANGE OF BOARDING STATION & CHANGE IN NAME customer can now approach
+the nearest Railway Reservation Office with Electronic Reservation Slip
+print out and photo identity proof mentioned in the Electronic Reservation
+Slip at least 24 hours before the scheduled departure of train as per
+existing Railway rules.
+
+Once you have cancelled your ticket, the fresh details and changes made by
+you will be available on the Cancelled e-Tickets History (as a link to
+site). The refund amount due to you after cancellation will be credited
+back to the same account which you had used for booking the ticket.
+
+Passengers are advised not to carry inflammable/dangerous/explosive
+articles as part of their luggage and also to desist from smoking in the
+trains.
+
+For any further assistance, please contact us at 24*7 Hrs.
+Customer Support at *011-39340000* or mail us at care@irctc.co.in.
+
+*Just dial 139 from your landline, mobile & CDMA phones for railway
+enquiries.*
+
+To book and get food delivered on your train berth, please call IRCTC Toll
+free No. 1323 or log in at www.ecatering.irctc.co.in
+
+*To book Budget Hotels, call IRCTC OYO Hotels on 9313223344 now or Click
+here to book
+<https://www.oyorooms.com/?src=irctc&utm_source=ERS_Text&utm_medium=irctc&utm_campaign=EmailTicketConfirmation>*
+
+********************************* Information
+**************************************
+
+For any enquiries or information regarding your transaction with IRCTC, do
+not provide your credit/debit card details by any means to IRCTC. All your
+queries can be replied on the basis of 15 digit IRCTC Transaction id/ 10
+digit PNR no./ User id. IRCTC does not store the credit/ debit card
+information in any form during the transaction.
+
+************************************************************************************
+
+Please don't print unless extremely necessary.
+
+
+
+
+
+*Warm Regards,Customer CareInternet TicketingIRCTC*
+
+--001a11435b4ca4f48b056046210d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"auto"></div><div class=3D"gmail_quote">---------- Forwarded messa=
+ge ----------<br>From:  &lt;<a href=3D"mailto:ticketadmin@irctc.co.in">tick=
+etadmin@irctc.co.in</a>&gt;<br>Date: 20-Aug-2017 1:01 PM<br>Subject: Bookin=
+g Confirmation on IRCTC, Train: 12791, 16-Nov-2017, 3A, SC - DNR<br>To:  &l=
+t;<a href=3D"mailto:raj.rajeev15@gmail.com">raj.rajeev15@gmail.com</a>&gt;<=
+br>Cc: <br><br type=3D"attribution"><div id=3D"m_-4494447205414741438ircp_c=
+onfirmation_div"><table width=3D"100%"><tbody><tr><td colspan=3D"2" style=
+=3D"font:12px arial;color:#333;text-align:justify"><hr><br><b>This is a sys=
+tem generated mail. Please do not reply to this email ID. If you have a que=
+ry or need any clarification you may: <br>(1) Call our 24-hour Customer Car=
+e or<br>(2) Email Us <a href=3D"mailto:care@irctc.co.in" target=3D"_blank">=
+care@irctc.co.in</a> </b> <br><hr><br></td></tr><tr><td style=3D"border-bot=
+tom:1px solid #ccc;font:12px arial"><div style=3D"font:bold 14px arial;colo=
+r:#0099ff;margin:0;padding:0"><span>Ticket Confirmation</span></div></td><t=
+d style=3D"font:bold 14px arial;color:#0099ff;border-bottom:1px solid #ccc"=
+><img alt=3D"IRCTC" style=3D"float:right"></td></tr></tbody></table><br><p>=
+<b>Dear Customer,</b></p><p style=3D"text-align:justify;color:#000000;text-=
+align:justify">Congratulations! Thank you for using IRCTC's online rail res=
+ervation facility. Your e-ticket has been booked and the details are indica=
+ted below.</p><p style=3D"text-align:justify;color:#000000">Please take a s=
+creenshot of ERS i.e. Virtual Reservation Message(VRM) OF YOUR TICKET FROM =
+YOUR Booked Tickets History page .You have to carry this VRM or SMS send to=
+ you along with any one from the listed identity cards (Voter Identity Card=
+ / Passport / PAN Card / Driving License / Photo ID card issued by Central =
+/ State Govt / Student Identity Card with photograph issued by recognized S=
+chool or College for their students / Nationalised Bank Passbook with photo=
+graph / Credit Cards issued by Banks with laminated photograph) during trai=
+n journey in original. Both these i.e SMS or VRM &amp; original ID will be =
+examined by ticket checking staff on stations/trains for verification purpo=
+se.</p><br><div style=3D"font:bold 14px arial;color:#0099ff;margin:0;paddin=
+g:0"><span>Ticket Details</span></div><hr><table width=3D"100%" cellpadding=
+=3D"5"><tr><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Tr=
+ansaction ID : </b></td><td style=3D"border-bottom:1px solid #ccc;font:12px=
+ arial"> <span>100000949758067</span></td><td style=3D"border-bottom:1px so=
+lid #ccc;font:12px arial"><b>PNR No. :</b></td><td style=3D"border-bottom:1=
+px solid #ccc;font:12px arial"><span>4135269875</span></td><td style=3D"bor=
+der-bottom:1px solid #ccc;font:12px arial"><b>Train No. &amp; Name : </b></=
+td><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><span>12791 /=
+ SC DNR EXPRESS</span></td></tr><tr><td style=3D"border-bottom:1px solid #c=
+cc;font:12px arial"><b>Date of Booking : </b></td><td style=3D"border-botto=
+m:1px solid #ccc;font:12px arial"><span>20-Aug-2017</span></td><td style=3D=
+"border-bottom:1px solid #ccc;font:12px arial"><b>Class : </b></td><td styl=
+e=3D"border-bottom:1px solid #ccc;font:12px arial"><span>THIRD AC</span></t=
+d><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Quota : </b=
+> </td><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><span>GEN=
+ERAL </span> </td> </tr><tr><td style=3D"border-bottom:1px solid #ccc;font:=
+12px arial"><b>Date of Journey : </b></td><td style=3D"border-bottom:1px so=
+lid #ccc;font:12px arial"><span>16-Nov-2017</span></td> <td style=3D"border=
+-bottom:1px solid #ccc;font:12px arial"><b>From : </b> </td><td style=3D"bo=
+rder-bottom:1px solid #ccc;font:12px arial"><span>SC</span></td> <td style=
+=3D"border-bottom:1px solid #ccc;font:12px arial"><b>To : </b> </td><td sty=
+le=3D"border-bottom:1px solid #ccc;font:12px arial"><span>DNR</span></td> <=
+/tr><tr> <td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Boar=
+ding At : </b> </td><td style=3D"border-bottom:1px solid #ccc;font:12px ari=
+al"><span>SC</span></td><td style=3D"border-bottom:1px solid #ccc;font:12px=
+ arial"><b>Date Of Boarding : </b> </td><td style=3D"border-bottom:1px soli=
+d #ccc;font:12px arial"><span>16-Nov-2017</span> </td><td style=3D"border-b=
+ottom:1px solid #ccc;font:12px arial"><b>Reservation Upto :</b></td><td sty=
+le=3D"border-bottom:1px solid #ccc;font:12px arial"><span>DNR</span></td> <=
+/tr><tr> <td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Sche=
+duled Departure : </b> </td><td style=3D"border-bottom:1px solid #ccc;font:=
+12px arial"><span>N.A.</span></td><td style=3D"border-bottom:1px solid #ccc=
+;font:12px arial"><b>Insurance (No. of Psng) : </b> </td><td style=3D"borde=
+r-bottom:1px solid #ccc;font:12px arial"><span>3</span> </td><td style=3D"b=
+order-bottom:1px solid #ccc;font:12px arial"><b></b></td><td style=3D"borde=
+r-bottom:1px solid #ccc;font:12px arial"><span></span> </td></tr><tr></tr><=
+/table><br><div style=3D"font:bold 14px arial;color:#0099ff;margin:0;paddin=
+g:0"><span>Passenger Details</span></div><hr><table width=3D"100%" cellpadd=
+ing=3D"5"><tbody><tr align=3D"left" style=3D"background-color:#f0f3ff"><td =
+style=3D"font-size:12px"><b>Sl. No.</b></td><td style=3D"font-size:12px"><b=
+>Name</b></td><td style=3D"font-size:12px"><b>Age</b></td><td style=3D"font=
+-size:12px"><b>Gender</b></td><td style=3D"font-size:12px"><b>Status</b></t=
+d><td style=3D"font-size:12px"><b>Coach</b></td><td style=3D"font-size:12px=
+"><b>Seat / Berth / WL No</b></td></tr><tr><td style=3D"border-bottom:1px s=
+olid #ccc;font:12px arial">1</td><td style=3D"border-bottom:1px solid #ccc;=
+font:12px arial">MANISH SHARMA</td><td style=3D"border-bottom:1px solid #cc=
+c;font:12px arial">31</td><td style=3D"border-bottom:1px solid #ccc;font:12=
+px arial">Male</td><td style=3D"border-bottom:1px solid #ccc;font:12px aria=
+l">CNF</td><td style=3D"border-bottom:1px solid #ccc;font:12px arial">B4&nb=
+sp;</td><td style=3D"border-bottom:1px solid #ccc;font:12px arial">33&nbsp;=
+</td></tr><tr><td style=3D"border-bottom:1px solid #ccc;font:12px arial">2<=
+/td><td style=3D"border-bottom:1px solid #ccc;font:12px arial">RITUL RANJAN=
+</td><td style=3D"border-bottom:1px solid #ccc;font:12px arial">28</td><td =
+style=3D"border-bottom:1px solid #ccc;font:12px arial">Female</td><td style=
+=3D"border-bottom:1px solid #ccc;font:12px arial">CNF</td><td style=3D"bord=
+er-bottom:1px solid #ccc;font:12px arial">B4&nbsp;</td><td style=3D"border-=
+bottom:1px solid #ccc;font:12px arial">36&nbsp;</td></tr><tr><td style=3D"b=
+order-bottom:1px solid #ccc;font:12px arial">3</td><td style=3D"border-bott=
+om:1px solid #ccc;font:12px arial">RAJEEV KUMAR</td><td style=3D"border-bot=
+tom:1px solid #ccc;font:12px arial">31</td><td style=3D"border-bottom:1px s=
+olid #ccc;font:12px arial">Male</td><td style=3D"border-bottom:1px solid #c=
+cc;font:12px arial">CNF</td><td style=3D"border-bottom:1px solid #ccc;font:=
+12px arial">B4&nbsp;</td><td style=3D"border-bottom:1px solid #ccc;font:12p=
+x arial">35&nbsp;</td></tr></tbody></table><br><div style=3D"font:bold 14px=
+ arial;color:#0099ff;margin:0;padding:0"><span>Fare Details</span></div><hr=
+><table width=3D"100%" cellpadding=3D"5"><tbody><tr><td style=3D"border-bot=
+tom:1px solid #ccc;font:12px arial"><b>Distance :</b></td><td style=3D"bord=
+er-bottom:1px solid #ccc;font:12px arial">1830 KM</td></tr><tr><td style=3D=
+"border-bottom:1px solid #ccc;font:12px arial"><b>Ticket Fare :</b></td><td=
+ style=3D"border-bottom:1px solid #ccc;font:12px arial">Rs. 5610.00 </td></=
+tr><tr><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Servic=
+e Charge :</b></td><td style=3D"border-bottom:1px solid #ccc;font:12px aria=
+l">Rs. 0.00 </td></tr><tr><td style=3D"border-bottom:1px solid #ccc;font:12=
+px arial"><b>Travel Insurance Premium (Inclusive of Service Tax) :</b></td>=
+<td style=3D"border-bottom:1px solid #ccc;font:12px arial">Rs. 0.00 </td></=
+tr><tr><td style=3D"border-bottom:1px solid #ccc;font:12px arial"><b>Total =
+Fare :</b></td><td style=3D"font:110% strong;border-bottom:1px solid #ccc">=
+Rs. 5610.00 *</td></tr><tr><td style=3D"border-bottom:1px solid #ccc;font:1=
+2px arial" colspan=3D"2"><b>* Payment Gateway charges as applicable.</b></t=
+d></tr></tbody></table><p style=3D"text-align:justify;color:#000000">For ca=
+ncellation of your ticket, please log in to your account, select the PNR yo=
+u wish to cancel and cancel your ticket online. Cancellation of your e-Tick=
+et is possible only on the website <a href=3D"http://www.irctc.co.in" targe=
+t=3D"_blank">www.irctc.co.in</a>, and is NOT possible on PRS Counters.</p><=
+p style=3D"text-align:justify;color:#000000">You can cancel any of the pass=
+enger names from the list of passengers on this ticket without affecting th=
+e ticket as a whole.</p><p style=3D"text-align:justify;color:#000000">This =
+ticket is booked on a personal user ID and can not be sold by an agent. If =
+bought from an agent by any individual, it is at his/her own risk</p><p sty=
+le=3D"text-align:justify;color:#000000">CANCELLATION OF E-TICKETS</p><p sty=
+le=3D"text-align:justify;color:#000000">(1) E-Ticket can be cancelled onlin=
+e till preparation of charts (which is normally 4 to 6 hours before the sch=
+eduled departure of the train from the originating stations. (For trains st=
+arting up to 12 noon the chart preparation is usually done on the previous =
+night)) OR 4 hours before the scheduled departure of boarding the train in =
+case of confirmed ticket OR 30 minutes before the scheduled departure of bo=
+arding the train in case of RAC/WL whichever is earlier. If by any reason y=
+ou are unable to cancel your ticket on the website till the time of chartin=
+g please mail to <a href=3D"mailto:etickets@irctc.co.in" target=3D"_blank">=
+etickets@irctc.co.in</a>. User can check their refund status online by clic=
+king &quot;Refund Status&quot; link after logging in. All refund will be pr=
+ocessed as per extent Railway Refund Rules. Please refer refund rules <a hr=
+ef=3D"https://www.irctc.co.in/eticketing/staticPage/IRRules.html" target=3D=
+"_blank">here</a>.</p><p style=3D"text-align:justify;color:#000000">(2) Aft=
+er preparation of charts, the user shall have to file online TDR for claimi=
+ng refund. IRCTC forward the case to concerned Zonal Railway on the basis o=
+f Customer request through EDR and Enhance coaching refund system. The refu=
+nd case will be decided by Railways. The TDR can be filed by the same user =
+who books the ticket. After receipt of the refund amount from Railway, it s=
+hall be credited only in the same account through which booking was made th=
+rough opted payment gateway. If by any reason you are unable to file TDR th=
+rough website please mail to <a href=3D"mailto:etickets@irctc.co.in" target=
+=3D"_blank">etickets@irctc.co.in</a>. User can check TDR/Refund status thro=
+ugh TDR History. All refund will be process as per extent Railway Refund Ru=
+les. Please refer refund rules <a href=3D"https://www.irctc.co.in/eticketin=
+g/staticPage/IRRules.html" target=3D"_blank">here</a>.</p><p style=3D"text-=
+align:justify;color:#000000">(3) Any refund amount will be credited only in=
+ the same account through booking was made by user. Customer is advised not=
+ to close that account so that refund amount will be credited back.</p><p s=
+tyle=3D"text-align:justify;color:#000000">For CHANGE OF BOARDING STATION &a=
+mp; CHANGE IN NAME customer can now approach the nearest Railway Reservatio=
+n Office with Electronic Reservation Slip print out and photo identity proo=
+f mentioned in the Electronic Reservation Slip at least 24 hours before the=
+ scheduled departure of train as per existing Railway rules.</p><p style=3D=
+"text-align:justify;color:#000000">Once you have cancelled your ticket, the=
+ fresh details and changes made by you will be available on the Cancelled e=
+-Tickets History (as a link to site). The refund amount due to you after ca=
+ncellation will be credited back to the same account which you had used for=
+ booking the ticket.</p><p style=3D"text-align:justify;color:#000000">Passe=
+ngers are advised not to carry inflammable/dangerous/<wbr>explosive article=
+s as part of their luggage and also to desist from smoking in the trains.</=
+p><p style=3D"text-align:justify;color:#000000"> For any further assistance=
+, please contact us at 24*7 Hrs.<br>Customer Support at <b>011-39340000</b>=
+ or mail us at <a href=3D"mailto:care@irctc.co.in" target=3D"_blank">care@i=
+rctc.co.in</a>.</p><p style=3D"color:#646464"><b>Just dial 139 from your la=
+ndline, mobile &amp; CDMA phones for railway enquiries.</b></p><p style=3D"=
+text-align:justify;color:#000000">To book and get food delivered on your tr=
+ain berth, please call IRCTC Toll free No. 1323 or log in at <a href=3D"htt=
+p://www.ecatering.irctc.co.in" target=3D"_blank">www.ecatering.irctc.co.in<=
+/a></p><p style=3D"text-align:justify;color:#000000"><b>To book Budget Hote=
+ls, call IRCTC OYO Hotels on 9313223344 now or  <a href=3D"https://www.oyor=
+ooms.com/?src=3Dirctc&amp;utm_source=3DERS_Text&amp;utm_medium=3Dirctc&amp;=
+utm_campaign=3DEmailTicketConfirmation" target=3D"_blank">Click here to boo=
+k</a></b></p><p style=3D"color:#757575"><b>******************************<w=
+br>** Information ******************************<wbr>*******</b></p><p styl=
+e=3D"text-align:justify;color:#757575">For any enquiries or information reg=
+arding your transaction with IRCTC, do not provide your credit/debit card d=
+etails by any means to IRCTC. All your queries can be replied on the basis =
+of 15 digit IRCTC Transaction id/ 10 digit PNR no./ User id. IRCTC does not=
+ store the credit/ debit card information in any form during the transactio=
+n.</p><p style=3D"color:#757575"><b>******************************<wbr>****=
+**************************<wbr>**********************</b></p><p style=3D"co=
+lor:#0099ff;font:bold 14px arial">Please don't print unless extremely neces=
+sary.<b></b></p><br><br><p><b>Warm Regards,<br>Customer Care<br>Internet Ti=
+cketing<br>IRCTC</b></p><br></div>
+</div>
+
+--001a11435b4ca4f48b056046210d--
+.
+
